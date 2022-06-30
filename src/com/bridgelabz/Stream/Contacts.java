@@ -1,6 +1,6 @@
 package com.bridgelabz.Stream;
+
 import java.util.Scanner;
-import java.util.jar.*;
 
 public class Contacts {
     private String firstname;
@@ -107,6 +107,7 @@ public class Contacts {
                 '}';
     }
 }
+
 
 
 
