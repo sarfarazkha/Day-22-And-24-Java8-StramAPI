@@ -1,5 +1,4 @@
 package com.bridgelabz.Stream;
-
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -42,7 +41,6 @@ public class AddressMain {
         addressBook1.contactsList.add(c1);
         addressBook1.contactsList.add(c2);
         addressBook1.contactsList.add(c3);
-
         Contacts c4 = new Contacts("Parwez", "khan", "paarth@123",
                 "9900", "Hosa oni",
                 580001, "Maharastra", "Pune");
@@ -52,7 +50,6 @@ public class AddressMain {
         Contacts c6 = new Contacts("satyam", "asati", "pavan@123",
                 "9900", "Hosa oni",
                 580001, "Delhi", "agra");
-
         AddressBook addressBook2 = new AddressBook();
         addressBook2.contactsList.add(c4);
         addressBook2.contactsList.add(c5);
@@ -83,11 +80,12 @@ public class AddressMain {
         for (Map.Entry<String, AddressBook> addressBookEntry : addressBookMap.entrySet()) {
             AddressBook addressBook = addressBookEntry.getValue();
             List<Contacts> sortedList = addressBook.contactsList.stream().
-                    sorted(Comparator.comparing(Contacts::getFirstname)).collect(Collectors.toList());
+                    sorted(Comparator.comparing(Contacts::getCity)).collect(Collectors.toList());
             System.out.println(sortedList);
         }
     }
 }
+
 
 
 
