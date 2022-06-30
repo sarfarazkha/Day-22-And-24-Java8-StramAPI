@@ -1,6 +1,5 @@
 package com.bridgelabz.Stream;
 
-
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -44,14 +43,13 @@ public class AddressMain {
         addressBook1.contactsList.add(c2);
         addressBook1.contactsList.add(c3);
 
-
         Contacts c4 = new Contacts("Parwez", "khan", "paarth@123",
                 "9900", "Hosa oni",
                 580001, "Maharastra", "Pune");
-        Contacts c5 = new Contacts("taiyaba", "khan", "tayu@123",
+        Contacts c5 = new Contacts("taiyaba", "khan", "praju@123",
                 "9900", "Hosa oni",
                 580001, "Karnataka", "Dharwad");
-        Contacts c6 = new Contacts("satyam", "asati", "satyam@123",
+        Contacts c6 = new Contacts("satyam", "asati", "pavan@123",
                 "9900", "Hosa oni",
                 580001, "Delhi", "agra");
 
@@ -64,15 +62,32 @@ public class AddressMain {
         addressBookMap.put("AddressBook2", addressBook2);
 
 
-        for (Map.Entry<String, AddressBook> entry : addressBookMap.entrySet()) {
-            AddressBook addressBook = entry.getValue();
-            List<Contacts> contactsList = addressBook.contactsList.stream().
-                    filter(x -> x.getCity().equals("Mumbai")).collect(Collectors.toList());
-            System.out.println(contactsList);
+//        for (Map.Entry<String, AddressBook> entry : addressBookMap.entrySet()) {
+//            AddressBook addressBook = entry.getValue();
+//            List<Contacts> contactsList = addressBook.contactsList.stream().
+//                    filter(x -> x.getCity().equals("Mumbai")).collect(Collectors.toList());
+//            System.out.println(contactsList);
+//        }
+
+//        AddressMain addressMain = new AddressMain();
+//        addressMain.getCount("Maharastra");
+
+
+//        for (Map.Entry<String, AddressBook> addressBookEntry : addressBookMap.entrySet()) {
+//            AddressBook value = addressBookEntry.getValue();
+//            List<Contacts> sortedList = value.contactsList.stream().
+//                    sorted(Comparator.comparing(Contacts::getFirstname)).collect(Collectors.toList());
+//            System.out.println(sortedList);
+//        }
+
+        for (Map.Entry<String, AddressBook> addressBookEntry : addressBookMap.entrySet()) {
+            AddressBook addressBook = addressBookEntry.getValue();
+            List<Contacts> sortedList = addressBook.contactsList.stream().
+                    sorted(Comparator.comparing(Contacts::getFirstname)).collect(Collectors.toList());
+            System.out.println(sortedList);
         }
-
-        AddressMain addressMain = new AddressMain();
-        addressMain.getCount("Maharastra");
-
     }
 }
+
+
+
