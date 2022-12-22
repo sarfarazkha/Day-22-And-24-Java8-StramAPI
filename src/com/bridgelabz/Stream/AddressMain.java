@@ -6,10 +6,7 @@ import java.util.stream.Collectors;
 
 public class AddressMain {
     static Map<String, AddressBook> addressBookMap = new HashMap<>();
-
     static Map<String, List<Contacts>> cityContactsMap = new HashMap<>();
-
-
     static Map<String, List<Contacts>> stateContactsMap = new HashMap<>();
 
 
@@ -58,25 +55,6 @@ public class AddressMain {
         addressBookMap.put("AddressBook1", addressBook1);
         addressBookMap.put("AddressBook2", addressBook2);
 
-
-//        for (Map.Entry<String, AddressBook> entry : addressBookMap.entrySet()) {
-//            AddressBook addressBook = entry.getValue();
-//            List<Contacts> contactsList = addressBook.contactsList.stream().
-//                    filter(x -> x.getCity().equals("Mumbai")).collect(Collectors.toList());
-//            System.out.println(contactsList);
-//        }
-
-//        AddressMain addressMain = new AddressMain();
-//        addressMain.getCount("Maharastra");
-
-
-//        for (Map.Entry<String, AddressBook> addressBookEntry : addressBookMap.entrySet()) {
-//            AddressBook value = addressBookEntry.getValue();
-//            List<Contacts> sortedList = value.contactsList.stream().
-//                    sorted(Comparator.comparing(Contacts::getFirstname)).collect(Collectors.toList());
-//            System.out.println(sortedList);
-//        }
-
         for (Map.Entry<String, AddressBook> addressBookEntry : addressBookMap.entrySet()) {
             AddressBook addressBook = addressBookEntry.getValue();
             List<Contacts> sortedList = addressBook.contactsList.stream().
@@ -85,7 +63,3 @@ public class AddressMain {
         }
     }
 }
-
-
-
-
