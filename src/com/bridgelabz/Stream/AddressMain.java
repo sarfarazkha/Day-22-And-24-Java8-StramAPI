@@ -32,7 +32,7 @@ public class AddressMain {
         Contacts c6 = new Contacts("satyam", "asati", "pavan@123",
                 "9900", "Hosa oni",
                 580001, "Delhi", "agra");
-
+        
         AddressBook addressBook1 = new AddressBook();
         addressBook1.contactsList.add(c1);
         addressBook1.contactsList.add(c2);
@@ -52,7 +52,3 @@ public class AddressMain {
         }
     }
 }
-
-
-
-
