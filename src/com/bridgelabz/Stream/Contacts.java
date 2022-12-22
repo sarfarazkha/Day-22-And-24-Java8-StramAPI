@@ -16,7 +16,6 @@ public class Contacts {
 
     static Scanner scanner = new Scanner(System.in);
 
-
     public Contacts() {
     }
 
@@ -145,11 +144,3 @@ public class Contacts {
                 '}';
     }
 }
-
-
-
-
-
-
-
-
