@@ -14,9 +14,6 @@ public class Contacts {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public Contacts() {
-    }
-
     public Contacts(String firstname, String lastname, String email, String phoneNumber,
                     String address, int zip, String state, String city) {
         this.firstname = firstname;
