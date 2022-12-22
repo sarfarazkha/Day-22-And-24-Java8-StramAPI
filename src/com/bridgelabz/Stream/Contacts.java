@@ -13,7 +13,6 @@ public class Contacts {
     private String city;
 
     static Scanner scanner = new Scanner(System.in);
-
     public Contacts() {
     }
 
@@ -107,12 +106,3 @@ public class Contacts {
                 '}';
     }
 }
-
-
-
-
-
-
-
-
-
