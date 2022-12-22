@@ -5,7 +5,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class AddressMain {
-
     static Map<String, Contacts> contactsMap = new HashMap<>();
 
     static Map<String, AddressBook> addressBookMap = new HashMap<>();
@@ -28,8 +27,7 @@ public class AddressMain {
             System.out.println("The contact is not present in Addressbook");
         }
     }
-
-    private static void showContact() {
+     private static void showContact() {
         System.out.println("Enter the contactNumber");
         String phoneNumber = scanner.next();
         Contacts contacts = contactsMap.get(phoneNumber);
@@ -87,7 +85,6 @@ public class AddressMain {
         } while (choice != 5);
     }
     public static void main(String[] args) {
-
         AddressMain addressMain= new AddressMain();
         contactOperations();
         AddressBook addressBook = new AddressBook();
