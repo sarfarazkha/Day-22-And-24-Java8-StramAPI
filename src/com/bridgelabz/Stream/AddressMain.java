@@ -27,8 +27,7 @@ public class AddressMain {
         System.out.println("Total Person Count in state " + state + ": " + count);
     }
 
-
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Contacts c1 = new Contacts("saffu", "khan", "saffu@123",
                 "9900", "Hosa oni",
                 580001, "Maharastra", "Mumbai");
@@ -88,6 +87,3 @@ public class AddressMain {
         }
     }
 }
-
-
-
