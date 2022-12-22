@@ -7,10 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class AddressMain {
     static Map<String, AddressBook> addressBookMap = new HashMap<>();
-
     static Map<String, List<Contacts>> cityContactsMap = new HashMap<>();
-
-
     static Map<String, List<Contacts>> stateContactsMap = new HashMap<>();
 
     public static void main(String[] args) {
@@ -63,7 +60,6 @@ public class AddressMain {
                 cityContactsMap.put(x.getCity(), contactsList);
             }
         });
-
         System.out.println(addressBook1.contactsList);
         System.out.println("state Contact map");
         System.out.println(stateContactsMap);
